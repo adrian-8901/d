@@ -1,0 +1,19 @@
+# Docker Image
+image: 
+  name: ghcr.io/sushrut1101/docker:arch
+  
+services: 
+  - docker:dind
+
+# Stages
+stages:
+  - build
+
+# SSH Job
+ssh:
+  stage: build
+  timeout: 1 month
+  script:
+    - sudo bash tmate.sh 2>&1 | tee /tmp/ssh.txt
+    - while true; do sleep 1; done
+#
