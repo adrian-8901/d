@@ -14,6 +14,4 @@ ssh:
   stage: build
   timeout: 1 month
   script:
-    - sudo bash tmate.sh 2>&1 | tee /tmp/ssh.txt
-    - while true; do sleep 1; done
-#
+    - sudo bash tmate.sh | tee /tmp/ssh.txt
